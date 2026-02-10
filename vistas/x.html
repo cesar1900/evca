@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <form>
+    <label for="transporte">Selecciona tu medio de transporte favorito:</label>
+    <select id="transporte" onchange="mostrarInput()">
+        <option value="coche">Coche</option>
+        <option value="avion">Avion</option>
+        <option value="tren">Tren</option>
+        <option value="otro">otro</option>
+    </select>
+    <input type="text" id="otroTransporte" placeholder="Otro medio de transporte" disabled>
+</form>
+
+<script>
+    function mostrarInput() {
+        const select = document.getElementById('transporte');
+        const input = document.getElementById('otroTransporte');
+
+        if (select.value === 'otro') {
+            input.disabled = false;
+        } else {
+            input.disabled = true;
+        }
+    }
+</script>
+</html> 
