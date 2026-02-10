@@ -5,7 +5,7 @@ require_once "../modelos/Reporte_as.php";
 $reporte_as= new Reporte_as();
 
 
-
+  
 
 
 require_once "vendor/autoload.php";
