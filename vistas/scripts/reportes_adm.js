@@ -23,7 +23,7 @@ function listar(){
 		],
 		"ajax":
 		{
-			url:'../ajax/reporte_adm.php?op=listar_adm',
+			url:'../ajax/reportes_adm.php?op=listar_adm',
 			type: "get",
 			dataType : "json",
 			error:function(e){

@@ -23,7 +23,7 @@ function listar(){
 		],
 		"ajax":
 		{
-			url:'../ajax/reporte_as.php?op=listar_as',
+			url:'../ajax/reportes_as.php?op=listar_as',
 			type: "get",
 			dataType : "json",
 			error:function(e){

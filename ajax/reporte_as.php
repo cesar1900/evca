@@ -3,10 +3,7 @@
 require_once "../modelos/Reporte_as.php";
 
 
-if (strlen(session_id()) < 1)
-    session_start();
 
-$sede=$_SESSION['sede'];
 $reporte_as= new Reporte_as();
 
 

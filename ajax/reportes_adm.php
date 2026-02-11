@@ -2,7 +2,10 @@
 
 require_once "../modelos/Reporte_adm.php";
 
+if (strlen(session_id()) < 1)
+    session_start();
 
+$sede=$_SESSION['sede'];
 $reporte_adm= new Reporte_adm();
 
 
