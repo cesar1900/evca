@@ -291,7 +291,7 @@ switch ($_GET["op"]) {
 			$_SESSION['idusuario']=$fetch->idusuario;
 			$id=$fetch->idusuario;
 			$_SESSION['nombre']=$fetch->nombre;
-                        $_SESSION['imagen']=$fetch->imagen;
+            $_SESSION['imagen']=$fetch->imagen;
 			$_SESSION['login']=$fetch->login;
 			$_SESSION['tipousuario']=$fetch->tipousuario;
 			$_SESSION['sede']=$fetch->sede;
@@ -309,38 +309,7 @@ switch ($_GET["op"]) {
 
 	break;
         
-        case 'verificar_e':
-		//validar si el usuario tiene acceso al sistema
-		$logina=$_POST['logina'];
-		$clavea=$_POST['clavea'];
-
-		//Hash SHA256 en la contraseña
-		$clavehash=hash("SHA256", $clavea);
-	
-		$rspta=$usuario->verificar_e($logina, $clavehash);
-
-		$fetch=$rspta->fetch_object();
-
-		if (isset($fetch)) 
-		{
-			# Declaramos la variables de sesion
-			$_SESSION['idempleado']=$fetch->idempleado;
-			$id=$fetch->idempleado;
-			$_SESSION['nombre']=$fetch->nombre;
-                        $_SESSION['apellidos']=$fetch->apellidos;
-                        $_SESSION['imagen']=$fetch->imagen;
-			$_SESSION['login']=$fetch->login;
-			$_SESSION['tipousuario']=$fetch->tipousuario;
-			$_SESSION['sede']=$fetch->sede;
-                       $_SESSION['area']=$fetch->area;
-
-				
-
-		}
-
-		echo json_encode($fetch);
-
-	break;
+        
 
 	case 'salir':
 			
@@ -355,7 +324,7 @@ switch ($_GET["op"]) {
         //Destruìmos la sesión
         session_destroy();
         //Redireccionamos al login
-        header("Location: ../index.php");
+        header("Location: ../vistas/login.html");
 
 	break;
     

@@ -1,13 +1,17 @@
 <?php
 //activamos almacenamiento en el buffer
 ob_start();
-
-
-require 'header2.php';
-
+session_start();
+if (!isset($_SESSION['nombre'])) {
+  header("Location: login.php");
+}else{
 
  
+require 'header.php';
+require_once('../modelos/Usuario.php');
+
   
+ 
   
 ?>
     <div class="content-wrapper">
@@ -20,16 +24,17 @@ require 'header2.php';
       <div class="box">
 <div class="panel-body">
 
-
+<?php if ($_SESSION['tipousuario']=='Administrador') {
+?>
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
   <div class="small-box bg-yellow">
     
-      <a href="reporte_evento_asistencial.php" class="small-box-footer">
+    <a href="reportes_as.php" class="small-box-footer">
     <div class="inner">
       <h5 style="font-size: 20px;">
-        <strong>Reporte eventos ASISTENCIALES</strong>
+        <strong>Eventos</strong>
       </h5>
-       
+      <p>ASISTENCIALES</p>
     </div>
     <div class="icon">
       <i class="fa fa-list" aria-hidden="true"></i>
@@ -41,17 +46,19 @@ require 'header2.php';
     </a>
   </div>
 </div>
+<?php } ?>
 
-
+<?php if ($_SESSION['tipousuario']=='Administrador') {
+?>
 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
   <div class="small-box bg-green">
     
-    <a href="reporte_evento_adm.php" class="small-box-footer">
+    <a href="reportes_adm.php" class="small-box-footer">
     <div class="inner">
       <h5 style="font-size: 20px;">
-        <strong>Reporte eventos ADMINISTRATIVOS</strong>
+        <strong>Eventos</strong>
       </h5>
-     
+      <p>ADMINISTRATIVOS</p>
     </div>
     <div class="icon">
       <i class="fa fa-list" aria-hidden="true"></i>
@@ -63,11 +70,9 @@ require 'header2.php';
     </a>
   </div>
 </div>
+<?php } ?>
 
-
-   
-
-    
+  
 <!--fin centro-->
       </div>
       </div>
@@ -80,6 +85,6 @@ require 'header2.php';
 
 <?php
 require 'footer.php'; 
-
+}
 ob_end_flush();
 ?>

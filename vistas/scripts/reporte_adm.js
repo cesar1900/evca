@@ -20,14 +20,14 @@ function init(){
 
 //funcion limpiar
 function limpiar(){
-	  $("#fecha_evento").val("");
+	
+        $("#fecha_evento").val("");
         $("#hora_evento").val("");
         $("#uas").val("");
         $("#lugar_evento").val("");
         $("#lugar_r").val("");
         $("#descripcion").val("");
         $("#nombre_reporta").val("");
-        $("#hc_paciente").val("");
 }
 
 
@@ -67,7 +67,7 @@ function guardaryeditar(e){
      var formData=new FormData($("#formulario_s")[0]);
 
      $.ajax({
-        url: "../ajax/reporte_as.php?op=guardaryeditar",
+        url: "../ajax/reporte_adm.php?op=guardaryeditar",
         type: "POST",
         data: formData,
         contentType: false,

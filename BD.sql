@@ -16,6 +16,9 @@ INSERT INTO `tipousuario` (`idtipousuario`, `nombre`, `descripcion`, `fechacread
 INSERT INTO `tipousuario` (`idtipousuario`, `nombre`, `descripcion`, `fechacreada`, `idusuario`) VALUES
 (2, 'Super_Administrador', 'Con super priviliegios de gestionar todo el sistema', '2020-01-18 00:00:00', '2');
 
+INSERT INTO `tipousuario` (`idtipousuario`, `nombre`, `descripcion`, `fechacreada`, `idusuario`) VALUES
+(3, 'Administrador_uas', 'Con priviliegios de gestionar todo el sistema', '2020-01-18 00:00:00', '3');
+
 drop table usuarios;
 CREATE TABLE `usuarios` (
   `idusuario` int(11) NOT NULL AUTO_INCREMENT,
@@ -34,7 +37,7 @@ CREATE TABLE `usuarios` (
 );
 
 INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`, `password`, `celular`, `cedula`, `sede`,`area`, `imagen`) VALUES
-('Cesar eduardo', 'restrepo santacruz', 'admin', 1, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'Bordo','adm','default.jpg');
+('yesika', 'duymovic', 'admin', 1, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'Bordo','adm','default.jpg');
  
  INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`, `password`, `celular`, `cedula`, `sede`, `area`, `imagen`) VALUES
 ('sistemas', 'sistemas', 's_admin', 2, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'Bordo','adm','default.jpg');
@@ -46,6 +49,18 @@ INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`
 INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`, `password`, `celular`, `cedula`, `sede`, `area`, `imagen`) VALUES
 ('florencia', 'UAS', 'florencia', 3, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'PUNTO DE ATENCION FLORENCIA','Almacen','default.jpg');
 
+INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`, `password`, `celular`, `cedula`, `sede`, `area`, `imagen`) VALUES
+('balboa', 'UAS', 'balboa', 3, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'PUNTO DE ATENCION BALBOA','Almacen','default.jpg');
+ 
+INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`, `password`, `celular`, `cedula`, `sede`, `area`, `imagen`) VALUES
+('bolivar', 'UAS', 'bolivar', 3, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'PUNTO DE ATENCION BOLIVAR','Almacen','default.jpg');
+
+
+INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`, `password`, `celular`, `cedula`, `sede`, `area`, `imagen`) VALUES
+('sucre', 'UAS', 'sucre', 3, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'PUNTO DE ATENCION SUCRE','Almacen','default.jpg');
+ 
+INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`, `password`, `celular`, `cedula`, `sede`, `area`, `imagen`) VALUES
+('mercaderes', 'UAS', 'mercaderes', 3, 'esecuroccidente.sistemas@gmail.com.com', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', '3148410065', '1061730711', 'PUNTO DE ATENCION MERCADERES','Almacen','default.jpg');
 
 
 
@@ -54,6 +69,8 @@ INSERT INTO `usuarios` (`nombre`, `apellidos`, `login`, `idtipousuario`, `email`
 
 
 
+
+drop table reporte_as;
 CREATE TABLE `reporte_as` (
   `idreporte_as` int(11) NOT NULL AUTO_INCREMENT,
   `fecha_as` varchar(45) COLLATE utf8_bin NOT NULL,
@@ -68,6 +85,7 @@ CREATE TABLE `reporte_as` (
   constraint idreporte_as primary key(idreporte_as)
 );
 
+drop table reporte_adm;
 CREATE TABLE `reporte_adm` (
   `idreporte_adm` int(11) NOT NULL AUTO_INCREMENT,
   `fecha_adm` varchar(45) COLLATE utf8_bin NOT NULL,

@@ -112,102 +112,13 @@ if (strlen(session_id())<1)
       <li class="header">MENÚ DE NAVEGACIÓN</li>
 
 
-      <li><a href="escritorio.php"><i class="fa  fa-dashboard "></i> <span>Escritorio</span></a></li>
+      <li><a href="escritorio2.php"><i class="fa  fa-dashboard "></i> <span>Escritorio</span></a></li>
 
  
-<?php if ($_SESSION['tipousuario']=='Super_Administrador') {
-?>
-       
-
-      <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Departamento</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="departamento.php"><i class="fa fa-circle-o"></i> Departamento</a></li>            
-          </ul>
-      </li>
-       <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Reportes</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="reportes.php"><i class="fa fa-circle-o"></i>Correspondencia externa</a></li>            
-          </ul>
-           <ul class="treeview-menu">
-            <li><a href="reportes_i.php"><i class="fa fa-circle-o"></i>Correspondencia interna</a></li>            
-          </ul>
-      </li>
-         
-<?php } ?>
-
- <?php if ($_SESSION['tipousuario']=='Farmacia') {
-?>
-       
-
+ 
      
-       <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Norma</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="norma_medicamentos.php"><i class="fa fa-circle-o"></i>Norma medicamentos</a></li>            
-          </ul>
-           <ul class="treeview-menu">
-               <li><a href="norma_medicoquirurgico.php"><i class="fa fa-circle-o"></i>Norma medico quirurgico</a></li>            
-          </ul>
-           <ul class="treeview-menu">
-               <li><a href="norma_laboratorio_farmacia.php"><i class="fa fa-circle-o"></i>Norma reactivos</a></li>            
-          </ul>
-      </li>
-         
-<?php } ?> 
-      <?php if ($_SESSION['tipousuario']=='Empleado') {
-?>
-       
-
-      <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Mis datos</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="mi_usuario.php"><i class="fa fa-circle-o"></i> Mis datos</a></li>            
-          </ul>
-      </li>
-
-         
-<?php } ?>
       
-      <?php if ($_SESSION['tipousuario']=='Administrador') {
-?>
-       
-
-      <li class="treeview">
-          <a href="#">
-            <i class="fa fa-folder"></i> <span>Mis datos</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="mi_usuario_r.php"><i class="fa fa-circle-o"></i> Mis datos</a></li>            
-          </ul>
-      </li>
-
-         
-<?php } ?>
+      
       
       </ul>
     </section>
