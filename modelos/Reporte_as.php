@@ -14,7 +14,7 @@ public function __construct(){
 
 public function insertar($fecha_evento, $hora_evento, $uas, $lugar_evento, $lugar_r, $descripcion, $hc_paciente, $nombre_reporta){
 	
-       
+        
          $f=date('d/m/y');
 	$sql="INSERT INTO reporte_as (fecha_as, fecha_ev_as, hora_ev_as, sede, lugar_evento, relacion, descripcion_as, hc_paciente, nombre_re) VALUES ('$f','$fecha_evento','$hora_evento','$uas','$lugar_evento','$lugar_r','$descripcion','$hc_paciente','$nombre_reporta')"; 
       
